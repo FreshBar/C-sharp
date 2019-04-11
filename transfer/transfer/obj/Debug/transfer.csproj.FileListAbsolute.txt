@@ -1,0 +1,7 @@
+C:\Users\User\source\repos\transfer\transfer\bin\Debug\transfer.exe.config
+C:\Users\User\source\repos\transfer\transfer\bin\Debug\transfer.exe
+C:\Users\User\source\repos\transfer\transfer\bin\Debug\transfer.pdb
+C:\Users\User\source\repos\transfer\transfer\obj\Debug\transfer.csprojAssemblyReference.cache
+C:\Users\User\source\repos\transfer\transfer\obj\Debug\transfer.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\transfer\transfer\obj\Debug\transfer.exe
+C:\Users\User\source\repos\transfer\transfer\obj\Debug\transfer.pdb
