@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.489
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "transfer", "transfer\transfer.csproj", "{B80ADB6C-6629-44DA-8C78-565C0ADD8838}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "perevod", "perevod\perevod.csproj", "{6C6B7286-5976-4DEE-9BDF-A83BC232F710}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{B80ADB6C-6629-44DA-8C78-565C0ADD8838}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B80ADB6C-6629-44DA-8C78-565C0ADD8838}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B80ADB6C-6629-44DA-8C78-565C0ADD8838}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B80ADB6C-6629-44DA-8C78-565C0ADD8838}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C6B7286-5976-4DEE-9BDF-A83BC232F710}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C6B7286-5976-4DEE-9BDF-A83BC232F710}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C6B7286-5976-4DEE-9BDF-A83BC232F710}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C6B7286-5976-4DEE-9BDF-A83BC232F710}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {E321DDDD-9387-4A68-B83D-D35DF58EF87D}
+		SolutionGuid = {3FECF627-9959-4700-A161-B16A91A43F0F}
 	EndGlobalSection
 EndGlobal
