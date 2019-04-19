@@ -27,10 +27,12 @@ namespace transfer
 
         static string from_10_to_any(string s_num, int num_base)
         {
+            while (s_num[0] == '0' && s_num.Length > 1)
+                s_num = s_num.Remove(0, 1);
             int num = Convert.ToInt32(s_num);
             string s_num_out = "";
             int power;
-            for (power = 1; power <= num; power *= num_base) ;
+            for (power = 1; power <= num; power *= num_base);
             power /= num_base;
             for (; power >= 1; power /= num_base)
             {
@@ -44,12 +46,13 @@ namespace transfer
                 s_num_out += (char)(give_num_symb(k));
             }
             return s_num_out;
-        }   
-        
-               
+        }
+
+
         static string from_any_to_10(string s_num, int num_base)
-        {   
-         
+        {
+            while (s_num[0] == '0' && s_num.Length > 1)
+                s_num = s_num.Remove(0,1); //удалить первый символ строчки
             int size = s_num.Length - 1;
             int i, power = 1;
             int sum = 0;
@@ -65,17 +68,17 @@ namespace transfer
                 power /= num_base;
 
             }
-        string s_num_out = Convert.ToString(sum);
-        return s_num_out;
+            string s_num_out = Convert.ToString(sum);
+            return s_num_out;
         }
 
         static string from_any_to_any(string s_num, int num_base_from, int num_base_to)
         {
-            if(num_base_from == 10)
+            if (num_base_from == 10)
             {
                 return from_10_to_any(s_num, num_base_to);
             }
-            else if(num_base_to == 10)
+            else if (num_base_to == 10)
             {
                 return from_any_to_10(s_num, num_base_from);
             }
@@ -84,7 +87,29 @@ namespace transfer
                 return from_10_to_any(from_any_to_10(s_num, num_base_from), num_base_to);
             }
         }
-                
+        static int check(string s_num, int num_base_from, int num_base_to)
+        {
+            if (num_base_from > 36 || num_base_from < 2)
+            {
+                return 1;
+            }
+            else if (num_base_to > 36 || num_base_to < 2)
+            {
+                return 2;
+            }
+            else
+            {
+                for (int i = 0; i < s_num.Length; i++)
+                {
+                    if (give_symb_num(s_num[i]) >= num_base_from)
+                    {
+                        return 3;
+                    }
+                }
+            }
+            return 0;
+        }
+
         static void Main(string[] args)
         {
             while (true)
@@ -96,10 +121,15 @@ namespace transfer
                 int num_base_from = Convert.ToInt32(Console.ReadLine());
                 Console.Write("Введите основание конечной системы: ");
                 int num_base_to = Convert.ToInt32(Console.ReadLine());
-                               
-                Console.WriteLine(from_any_to_any(s_num, num_base_from, num_base_to));
-               
-                
+                if (check(s_num, num_base_from, num_base_to) == 0)
+                {
+                    Console.WriteLine(from_any_to_any(s_num, num_base_from, num_base_to));
+                }
+                else
+                {
+                    Console.WriteLine("Неправильно введены данные!");
+                }
+
             }
         }
     }
